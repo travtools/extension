@@ -1,0 +1,12 @@
+{
+  "name": "trav-tools-extension",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start:firefox": "web-ext run --source-dir ./mv2/",
+    "build:mv2": "web-ext build --source-dir ./mv2/ --artifacts-dir=zips -o --filename='{name}-mv2-{version}.zip'",
+    "build:mv3": "web-ext build --source-dir ./mv3/ --artifacts-dir=zips -o --filename='{name}-mv3-{version}.zip'",
+    "build": "yarn build:mv2 && yarn build:mv3",
+    "web-ext": "web-ext"
+  }
+}
